@@ -23,7 +23,13 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem; /* Verhoogd van 1rem naar 2rem voor meer ruimte */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
 }
 
 header {
@@ -517,4 +523,18 @@ footer {
     .step {
         margin-bottom: 1.5rem;
     }
+}
+
+/* Disabled form elements styling */
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.disabled input,
+.disabled select,
+.disabled textarea,
+.disabled button {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
 }

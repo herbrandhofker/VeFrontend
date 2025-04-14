@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tibber Integratie - VerlichteEnergie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tibber Integratie</h1>
+            <p>Technische details en implementatie</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#overzicht">Overzicht</a></li>
+            <li><a href="#technisch">Technische Details</a></li>
+            <li><a href="#api">API Integratie</a></li>
+            <li><a href="#prijzen">Dynamische Prijzen</a></li>
+            <li><a href="#data">Data & Privacy</a></li>
+            <li><a href="energiedeling.html">Energiedeling</a></li>
+            <li><a href="warmtepompen.html">Warmtepompen</a></li>
+        </ul>
+    </nav>
+
+    <section id="overzicht">
+        <div class="container">
+            <div class="section-title">
+                <h2>Over Tibber</h2>
+                <p>De technische basis voor ons energiedeelsysteem</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Waarom Tibber?</h3>
+                <p>Tibber is onze gekozen energieleverancier vanwege:</p>
+                <ul>
+                    <li>Volledige API-toegang tot verbruiksgegevens</li>
+                    <li>Dynamische energietarieven per uur</li>
+                    <li>Directe koppeling met de groothandelsmarkt</li>
+                    <li>Moderne technische infrastructuur</li>
+                    <li>Transparante prijsopbouw</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Voordelen voor VerlichteEnergie</h4>
+                    <p>De Tibber-integratie stelt ons in staat om:</p>
+                    <ul>
+                        <li>Energiestromen real-time te monitoren</li>
+                        <li>Slim te sturen op basis van dynamische prijzen</li>
+                        <li>Energiedeling technisch te faciliteren</li>
+                        <li>Verbruik en opwekking te optimaliseren</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technisch" style="background-color: #f5f5f5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technische Details</h2>
+                <p>Implementatie en vereisten</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Systeemvereisten</h3>
+                <ul>
+                    <li><strong>Slimme meter</strong>
+                        <ul>
+                            <li>DSMR 4.0 of hoger</li>
+                            <li>Actieve P1-poort</li>
+                            <li>Bij vervanging door Liander: gratis</li>
+                            <li>Op aanvraag: €72,60 incl. BTW</li>
+                        </ul>
+                    </li>
+                    <li><strong>Internet</strong>
+                        <ul>
+                            <li>Stabiele internetverbinding</li>
+                            <li>Minimaal 1 Mbps upload/download</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tibber-account</strong>
+                        <ul>
+                            <li>Persoonlijk account per deelnemer</li>
+                            <li>Actief energiecontract</li>
+                            <li>ACCESS_TOKEN voor API-toegang</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card mb-2">
+                <h3>ACCESS_TOKEN Configuratie</h3>
+                <p>Het Tibber ACCESS_TOKEN is essentieel voor ons systeem:</p>
+                <ol>
+                    <li>Log in op developer.tibber.com</li>
+                    <li>Genereer een persoonlijk ACCESS_TOKEN</li>
+                    <li>Deel deze tijdens het aanmeldproces</li>
+                </ol>
+                
+                <div class="warning-box">
+                    <h4>Privacy en Veiligheid</h4>
+                    <p>Uw ACCESS_TOKEN wordt:</p>
+                    <ul>
+                        <li>Versleuteld opgeslagen</li>
+                        <li>Alleen gebruikt voor energiedeling</li>
+                        <li>Nooit gedeeld met derden</li>
+                        <li>Op verzoek direct verwijderd</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="api">
+        <div class="container">
+            <div class="section-title">
+                <h2>API Integratie</h2>
+                <p>Technische implementatie details</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Data Endpoints</h3>
+                <p>We gebruiken de volgende Tibber API endpoints:</p>
+                <ul>
+                    <li><strong>Live Measurements</strong>: Real-time verbruiksdata</li>
+                    <li><strong>Price Info</strong>: Dynamische prijzen per uur</li>
+                    <li><strong>Historical Data</strong>: Historische verbruiksgegevens</li>
+                    <li><strong>Production Data</strong>: Zonnepaneel productie</li>
+                </ul>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Proof of Concept</h3>
+                <p>Voor de eerste fase gebruiken we:</p>
+                <ul>
+                    <li>Tibber-connectie van Herbrand Hofker</li>
+                    <li>Test-implementatie van energiedeling</li>
+                    <li>Monitoring van verbruikspatronen</li>
+                    <li>Validatie van prijsalgoritmes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="prijzen" style="background-color: #f5f5f5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dynamische Prijzen</h2>
+                <p>Slim inspelen op energietarieven</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Hoe werken dynamische prijzen?</h3>
+                <p>Tibber's prijzen variëren per uur op basis van:</p>
+                <ul>
+                    <li>Actuele vraag en aanbod</li>
+                    <li>Groothandelsprijzen EPEX</li>
+                    <li>Beschikbaarheid duurzame energie</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4>Typisch prijspatroon</h4>
+                    <ul>
+                        <li><strong>Piekuren (duur)</strong>
+                            <ul>
+                                <li>07:00-09:00 uur</li>
+                                <li>17:00-20:00 uur</li>
+                                <li>Vaak >€0,30/kWh</li>
+                            </ul>
+                        </li>
+                        <li><strong>Daluren (goedkoop)</strong>
+                            <ul>
+                                <li>02:00-04:00 uur</li>
+                                <li>11:00-15:00 uur</li>
+                                <li>Vaak rond €0,10/kWh</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Slim gebruik van prijsverschillen</h3>
+                <p>Met batterijopslag kunnen we profiteren van prijsverschillen:</p>
+                <ul>
+                    <li>Opladen tijdens goedkope uren</li>
+                    <li>Ontladen tijdens dure uren</li>
+                    <li>Gemiddeld prijsverschil: €0,20/kWh</li>
+                    <li>8 kWh batterij: €584/jaar besparing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="data">
+        <div class="container">
+            <div class="section-title">
+                <h2>Data & Privacy</h2>
+                <p>Veilig omgaan met uw gegevens</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Welke gegevens verzamelen we?</h3>
+                <ul>
+                    <li>Verbruik per uur of 15 minuten</li>
+                    <li>Opwekking zonnepanelen</li>
+                    <li>Dynamische prijzen</li>
+                    <li>Transacties energiedeling</li>
+                </ul>
+                
+                <div class="info-box">
+                    <h4>Data Gebruik</h4>
+                    <p>We gebruiken deze data voor:</p>
+                    <ul>
+                        <li>Optimalisatie energiedeling</li>
+                        <li>Verrekening tussen deelnemers</li>
+                        <li>Verbetering algoritmes</li>
+                        <li>Rapportages aan deelnemers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Privacy Waarborgen</h3>
+                <ul>
+                    <li>Versleutelde opslag</li>
+                    <li>Toegang alleen voor beheerders</li>
+                    <li>Data-minimalisatie</li>
+                    <li>Recht op vergetelheid</li>
+                    <li>Transparante rapportage</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <h4>Uw Rechten</h4>
+                    <p>U heeft altijd het recht om:</p>
+                    <ul>
+                        <li>Uw data in te zien</li>
+                        <li>Gegevens te laten corrigeren</li>
+                        <li>Data te laten verwijderen</li>
+                        <li>Export van uw gegevens te ontvangen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Vragen over de technische implementatie?</p>
+            </div>
+
+            <div class="card text-center">
+                <h3>Contact voor technische vragen</h3>
+                <p>Heeft u vragen over de Tibber-integratie of technische aspecten?</p>
+                <p>Email: tech@verlichte-energie.nl</p>
+                <p>Tel: [telefoonnummer]</p>
+                <div class="mt-4">
+                    <a href="aanmelden.html" class="btn">Direct aanmelden</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VerlichteEnergie - Duurzame energie voor Sidhadorp Lelystad</p>
+            <p>In samenwerking met Wooncoöperatie "Harmonisch Wonen"</p>
+            <p>Website ontwikkeld door Kafka Academy B.V. - Alle rechten voorbehouden</p>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">Terug naar home</a></p>
+        </div>
+    </footer>
+</body>
+</html>
