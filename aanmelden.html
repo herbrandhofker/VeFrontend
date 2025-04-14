@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanmelden - VerlichteEnergie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Aanmelden bij VerlichteEnergie</h1>
+            <p>Word lid van onze duurzame energiegemeenschap</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="subsidies.html">Subsidies</a></li>
+            <li><a href="energiedeling.html">Energiedeling</a></li>
+            <li><a href="aanmelden.html" class="active">Aanmelden</a></li>
+        </ul>
+    </nav>
+
+    <section id="aanmeldproces">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aanmeldproces</h2>
+                <p>In twee eenvoudige stappen deelnemer worden</p>
+            </div>
+
+            <div class="steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Aanmelding</div>
+                    <p>Vul het aanmeldformulier in</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Bevestiging</div>
+                    <p>Ontvang een bevestigingsmail</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Tibber-koppeling</div>
+                    <p>Koppel uw Tibber-account</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Lidmaatschap</div>
+                    <p>Uw lidmaatschap is actief</p>
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Informatie over het lidmaatschap</h3>
+                <p>Het lidmaatschap van VerlichteEnergie staat open voor alle bewoners en gebouweigenaren in en rondom
+                    Sidhadorp, Lelystad. Door lid te worden, kunt u profiteren van:</p>
+                <ul>
+                    <li>Gezamenlijke inkoop van zonnepanelen tegen gereduceerde prijzen</li>
+                    <li>Deelname aan de energiedeelgemeenschap</li>
+                    <li>Ondersteuning bij subsidieaanvragen</li>
+                    <li>Toegang tot kennis en expertise op het gebied van duurzame energie</li>
+                    <li>Mogelijkheid om in latere fasen deel te nemen aan batterijopslag-projecten</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4>Lidmaatschapsproces</h4>
+                    <p>Het lidmaatschap verloopt in twee hoofdstappen:</p>
+                    <ol>
+                        <li>Initiële aanmelding via dit formulier (u ontvangt een bevestigingsmail)</li>
+                        <li>Activatie door uw Tibber-account te koppelen (instructies volgen na aanmelding)</li>
+                    </ol>
+                    <p>Pas na het voltooien van beide stappen is uw lidmaatschap volledig actief.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aanmeldformulier">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aanmeldformulier</h2>
+                <p>Vul onderstaand formulier in om u aan te melden</p>
+            </div>
+
+            <div class="card">
+                <form id="registrationForm" onsubmit="return submitForm()">
+                    <div class="form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" class="form-control" id="email" required
+                            placeholder="uw.email@voorbeeld.nl">
+                        <small>Dit e-mailadres wordt gebruikt als uw ID en voor communicatie</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Naam *</label>
+                        <input type="text" class="form-control" id="name" required placeholder="Volledige naam">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Adres *</label>
+                        <input type="text" class="form-control" id="address" required
+                            placeholder="Straat en huisnummer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode *</label>
+                        <input type="text" class="form-control" id="postcode" required placeholder="1234 AB">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Plaats *</label>
+                        <input type="text" class="form-control" id="city" required placeholder="Lelystad">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefoonnummer</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="06-12345678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="property">Type woning/gebouw *</label>
+                        <select class="form-control" id="property" required>
+                            <option value="">-- Selecteer --</option>
+                            <option value="huurwoning">Huurwoning</option>
+                            <option value="koopwoning">Koopwoning</option>
+                            <option value="kantoor">Kantoor</option>
+                            <option value="koepel">Koepel</option>
+                            <option value="tm-centrum">TM-centrum</option>
+                            <option value="anders">Anders</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Interesse in *</label>
+                        <div class="form-check">
+                            <input type="checkbox" id="interest-solar" name="interest" value="solar">
+                            <label for="interest-solar">Zonnepanelen</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="interest-battery" name="interest" value="battery">
+                            <label for="interest-battery">Batterijopslag</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="interest-sharing" name="interest" value="sharing">
+                            <label for="interest-sharing">Energiedeling</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="interest-charger" name="interest" value="charger">
+                            <label for="interest-charger">Gedeelde (bidirectionele) laadpalen</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="interest-info" name="interest" value="info">
+                            <label for="interest-info">Alleen informatie ontvangen</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Opmerkingen of vragen</label>
+                        <textarea class="form-control" id="comments" rows="4"
+                            placeholder="Eventuele opmerkingen of vragen..."></textarea>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">Ik ga akkoord met de <a href="#" target="_blank">privacyverklaring</a>
+                            *</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Ik wil de nieuwsbrief ontvangen</label>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn">Aanmelden</button>
+                    </div>
+
+                    <div id="successMessage">
+                        Bedankt voor uw aanmelding! Er is een bevestigingsmail verstuurd naar uw e-mailadres.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Veelgestelde vragen over lidmaatschap</h2>
+                <p>Antwoorden op uw vragen</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Wat kost het lidmaatschap?</h3>
+                <p>De exacte lidmaatschapskosten worden nog vastgesteld. We streven naar een lage drempel voor deelname.
+                    De kosten zullen gebruikt worden voor administratie en beheer van de vereniging.</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Ben ik verplicht om zonnepanelen te nemen?</h3>
+                <p>Nee, u kunt ook lid worden zonder direct zonnepanelen te installeren. U profiteert dan nog steeds van
+                    de kennis, expertise en eventuele toekomstige projecten van de vereniging.</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Hoe werkt de koppeling met Tibber?</h3>
+                <p>Na uw aanmelding ontvangt u instructies over hoe u uw Tibber-account kunt koppelen. Dit vereist dat u
+                    klant wordt bij Tibber (als u dat nog niet bent) en dat u uw ACCESS_TOKEN met VerlichteEnergie
+                    deelt. Dit is nodig om uw energiegegevens te kunnen gebruiken voor het energiedeelsysteem.</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Wat zijn de plannen voor de bidirectionele laadpalen?</h3>
+                <p>We willen ongeveer 5 laadpalen plaatsen op centrale locaties in de wijk, bij voorkeur dicht bij
+                    woningen met een 3-fasen aansluiting. Deze laadpalen zullen, waar mogelijk, bidirectioneel zijn. Dit
+                    betekent dat ze niet alleen elektrische voertuigen kunnen opladen, maar ook energie terug kunnen
+                    leveren aan de gemeenschap. Deze technologie is nog in ontwikkeling, maar biedt enorme mogelijkheden
+                    als flexibele energiebuffer voor onze gemeenschap. Leden van VerlichteEnergie kunnen gebruik maken
+                    van deze laadpalen tegen gunstige tarieven.</p>
+            </div>
+
+            <div class="card mb-2">
+                <h3>Kan ik mijn lidmaatschap opzeggen?</h3>
+                <p>Ja, u kunt uw lidmaatschap op elk moment opzeggen. De exacte voorwaarden en opzegtermijnen worden nog
+                    verder uitgewerkt op basis van de juridische regels voor energiecoöperaties in Nederland.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VerlichteEnergie - Duurzame energie voor Sidhadorp Lelystad</p>
+            <p>In samenwerking met Wooncoöperatie "Harmonisch Wonen"</p>
+            <p>Website ontwikkeld door Kafka Academy B.V. - Alle rechten voorbehouden</p>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">Terug naar home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm() {
+            // In een echte implementatie zou hier code staan om het formulier 
+            // via AJAX naar een server te sturen
+
+            // Voor deze demo tonen we alleen een succesbericht
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Scroll naar het succesbericht
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+            // Voorkom dat het formulier echt wordt verstuurd
+            return false;
+        }
+
+
+        // Script toevoegen aan het einde van je aanmelden.html bestand
+
+        function submitForm() {
+            // Voorkom dat het formulier normaal wordt verzonden
+            event.preventDefault();
+
+            // Verzamel alle formuliergegevens
+            const formData = {
+                email: document.getElementById('email').value,
+                name: document.getElementById('name').value,
+                street: document.getElementById('address').value,
+                house_number: document.getElementById('house_number').value,
+                postal_code: document.getElementById('postcode').value,
+                city: document.getElementById('city').value,
+                phone: document.getElementById('phone').value,
+                property_type: document.getElementById('property').value,
+                interest_solar: document.getElementById('interest-solar').checked,
+                interest_battery: document.getElementById('interest-battery').checked,
+                interest_sharing: document.getElementById('interest-sharing').checked,
+                interest_charger: document.getElementById('interest-charger').checked,
+                interest_info_only: document.getElementById('interest-info').checked,
+                comments: document.getElementById('comments').value,
+                newsletter: document.getElementById('newsletter').checked
+            };
+
+            // Stuur de gegevens naar de backend API
+            fetch('http://localhost:8000/api/register/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Toon het succesbericht
+                        document.getElementById('successMessage').style.display = 'block';
+                        document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+                        // Reset het formulier
+                        document.getElementById('registrationForm').reset();
+                    } else {
+                        // Toon foutmelding
+                        let errorMessage = 'Er is een fout opgetreden bij het verwerken van uw aanmelding.';
+                        if (data.errors) {
+                            errorMessage += ' Controleer de volgende velden: ';
+                            for (const field in data.errors) {
+                                errorMessage += `${field} (${data.errors[field].join(', ')}), `;
+                            }
+                            errorMessage = errorMessage.slice(0, -2);
+                        }
+
+                        alert(errorMessage);
+                    }
+                })
+                .catch(error => {
+                    console.error('Fout:', error);
+                    alert('Er is een fout opgetreden bij het verwerken van uw aanmelding. Probeer het later opnieuw.');
+                });
+
+            // Voorkom dat het formulier normaal wordt verzonden
+            return false;
+        }
+
+        // Voeg event listener toe aan het formulier
+        document.getElementById('registrationForm').addEventListener('submit', submitForm);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('registrationForm');
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        address: document.getElementById('address').value
+                    };
+
+                    try {
+                        const response = await fetch('http://localhost:8000/api/register/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok) {
+                            alert('Bedankt voor uw aanmelding! We hebben een bevestigingsemail gestuurd naar uw e-mailadres. Klik op de link in deze e-mail om uw account te activeren.');
+                            form.reset();
+                        } else {
+                            alert(`Er is een fout opgetreden: ${result.error}`);
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Er is een fout opgetreden bij het verzenden van het formulier. Probeer het later opnieuw.');
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
