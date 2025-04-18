@@ -1,0 +1,71 @@
+
+                        <svg width="100%" height="500" viewBox="0 0 800 450">
+                            <!-- Background -->
+                            <rect x="0" y="0" width="800" height="450" fill="#E8F5E9" />
+                            
+                            <!-- Roads -->
+                            <rect x="100" y="50" width="600" height="30" fill="#90A4AE" />
+                            <rect x="100" y="200" width="600" height="30" fill="#90A4AE" />
+                            <rect x="100" y="350" width="600" height="30" fill="#90A4AE" />
+                            <rect x="150" y="50" width="30" height="330" fill="#90A4AE" />
+                            <rect x="350" y="50" width="30" height="330" fill="#90A4AE" />
+                            <rect x="550" y="50" width="30" height="330" fill="#90A4AE" />
+                            
+                            <!-- Houses - Row 1 -->
+                            <g transform="translate(200, 100)">
+                                <!-- Rental houses (blue) -->
+                                <rect x="0" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="30" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="60" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="90" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                
+                                <!-- Owned houses (green) -->
+                                <rect x="200" y="0" width="20" height="20" fill="#4CAF50" stroke="#1B5E20" stroke-width="1" />
+                                <rect x="230" y="0" width="20" height="20" fill="#4CAF50" stroke="#1B5E20" stroke-width="1" />
+                                <rect x="260" y="0" width="20" height="20" fill="#FFEB3B" stroke="#F57F17" stroke-width="1" />
+                                <rect x="290" y="0" width="20" height="20" fill="#FFEB3B" stroke="#F57F17" stroke-width="1" />
+                                
+                                <!-- More rental houses -->
+                                <rect x="400" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="430" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="460" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="490" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                            </g>
+                            
+                            <!-- Houses - Row 2 -->
+                            <g transform="translate(200, 250)">
+                                <rect x="0" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="30" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="60" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="90" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                
+                                <rect x="200" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="230" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="260" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                <rect x="290" y="0" width="20" height="20" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                                
+                                <rect x="400" y="0" width="20" height="20" fill="#4CAF50" stroke="#1B5E20" stroke-width="1" />
+                                <rect x="430" y="0" width="20" height="20" fill="#4CAF50" stroke="#1B5E20" stroke-width="1" />
+                                <rect x="460" y="0" width="20" height="20" fill="#FFEB3B" stroke="#F57F17" stroke-width="1" />
+                                <rect x="490" y="0" width="20" height="20" fill="#FFEB3B" stroke="#F57F17" stroke-width="1" />
+                            </g>
+                            
+                            <!-- Legend -->
+                            <rect x="650" y="400" width="15" height="15" fill="#2196F3" stroke="#0D47A1" stroke-width="1" />
+                            <text x="670" y="412" font-size="12">Huurwoningen (214)</text>
+                            
+                            <rect x="650" y="420" width="15" height="15" fill="#4CAF50" stroke="#1B5E20" stroke-width="1" />
+                            <text x="670" y="432" font-size="12">Koopwoningen met zonnepanelen</text>
+                            
+                            <rect x="650" y="440" width="15" height="15" fill="#FFEB3B" stroke="#F57F17" stroke-width="1" />
+                            <text x="670" y="452" font-size="12">Koopwoningen zonder zonnepanelen</text>
+                            
+                            <!-- POIs -->
+                            <rect x="410" y="150" width="40" height="40" fill="#CE93D8" stroke="#4A148C" stroke-width="2" />
+                            <text x="430" y="175" text-anchor="middle" font-size="10" fill="#000">TM</text>
+                            <text x="430" y="185" text-anchor="middle" font-size="10" fill="#000">Centrum</text>
+                            
+                            <circle cx="300" cy="300" r="20" fill="#FFCC80" stroke="#E65100" stroke-width="2" />
+                            <text x="300" y="303" text-anchor="middle" font-size="10" fill="#000">Koepel</text>
+                        </svg>
+           

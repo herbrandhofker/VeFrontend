@@ -1,0 +1,72 @@
+
+                    <svg width="100%" height="350" viewBox="0 0 800 300">
+                        <!-- Sun -->
+                        <circle cx="100" cy="80" r="40" fill="#FFD700" />
+                        <g stroke="#FFD700" stroke-width="3">
+                            <line x1="100" y1="30" x2="100" y2="10" />
+                            <line x1="100" y1="150" x2="100" y2="130" />
+                            <line x1="50" y1="80" x2="30" y2="80" />
+                            <line x1="170" y1="80" x2="150" y2="80" />
+                            <line x1="64" y1="44" x2="50" y2="30" />
+                            <line x1="136" y1="44" x2="150" y2="30" />
+                            <line x1="64" y1="116" x2="50" y2="130" />
+                            <line x1="136" y1="116" x2="150" y2="130" />
+                        </g>
+                        
+                        <!-- Solar rays -->
+                        <g stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5">
+                            <line x1="130" y1="100" x2="250" y2="150" />
+                            <line x1="130" y1="80" x2="250" y2="100" />
+                            <line x1="130" y1="60" x2="250" y2="50" />
+                        </g>
+                        
+                        <!-- Houses -->
+                        <g transform="translate(250, 20)">
+                            <path d="M0,70 L50,30 L100,70 L100,150 L0,150 Z" fill="#B3E5FC" stroke="#0288D1" stroke-width="2" />
+                            <rect x="35" y="100" width="30" height="50" fill="#01579B" />
+                            <rect x="15" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="65" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="25" y="30" width="50" height="20" fill="#4FC3F7" />
+                            <!-- Solar panel -->
+                            <rect x="15" y="40" width="70" height="10" fill="#1A237E" stroke="#0D47A1" stroke-width="1" />
+                        </g>
+                        
+                        <g transform="translate(400, 20)">
+                            <path d="M0,70 L50,30 L100,70 L100,150 L0,150 Z" fill="#B3E5FC" stroke="#0288D1" stroke-width="2" />
+                            <rect x="35" y="100" width="30" height="50" fill="#01579B" />
+                            <rect x="15" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="65" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="25" y="30" width="50" height="20" fill="#4FC3F7" />
+                            <!-- Solar panel -->
+                            <rect x="15" y="40" width="70" height="10" fill="#1A237E" stroke="#0D47A1" stroke-width="1" />
+                        </g>
+                        
+                        <g transform="translate(550, 20)">
+                            <path d="M0,70 L50,30 L100,70 L100,150 L0,150 Z" fill="#B3E5FC" stroke="#0288D1" stroke-width="2" />
+                            <rect x="35" y="100" width="30" height="50" fill="#01579B" />
+                            <rect x="15" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="65" y="80" width="20" height="20" fill="#29B6F6" />
+                            <rect x="25" y="30" width="50" height="20" fill="#4FC3F7" />
+                            <!-- Solar panel -->
+                            <rect x="15" y="40" width="70" height="10" fill="#1A237E" stroke="#0D47A1" stroke-width="1" />
+                        </g>
+                        
+                        <!-- Energy flow lines -->
+                        <path d="M300,170 C370,220 380,220 450,170" stroke="#4CAF50" stroke-width="4" fill="none" />
+                        <path d="M450,170 C520,220 530,220 600,170" stroke="#4CAF50" stroke-width="4" fill="none" />
+                        
+                        <!-- Battery/Storage -->
+                        <rect x="370" y="200" width="60" height="80" rx="5" fill="#F5F5F5" stroke="#616161" stroke-width="2" />
+                        <rect x="375" y="205" width="50" height="15" fill="#8BC34A" />
+                        <rect x="375" y="225" width="50" height="15" fill="#8BC34A" />
+                        <rect x="375" y="245" width="50" height="15" fill="#8BC34A" />
+                        <rect x="375" y="265" width="50" height="10" fill="#8BC34A" />
+                        <text x="400" y="300" text-anchor="middle" font-size="14">Energieopslag</text>
+                        
+                        <!-- Grid connection -->
+                        <rect x="650" y="80" width="20" height="80" fill="#78909C" />
+                        <rect x="670" y="90" width="80" height="60" fill="#546E7A" />
+                        <text x="710" y="125" text-anchor="middle" fill="white" font-size="14">Elektriciteitsnet</text>
+                        <path d="M650,120 C640,120 620,120 600,120" stroke="#FF5722" stroke-width="4" fill="none" />
+                    </svg>
+               
