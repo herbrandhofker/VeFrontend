@@ -17,11 +17,24 @@
 
         .audience-benefits {
             flex-grow: 1;
+            text-align: left; /* Links uitlijnen van de lijst */
+            padding-left: 15px; /* Consistente padding links */
+            margin-top: 16px; /* Meer ruimte tussen heading en lijst */
+            margin-bottom: 25px; /* Meer ruimte tussen lijst en button */
+        }
+        
+        .audience-benefits li {
+            text-align: left; /* Zorg dat list items ook links uitgelijnd zijn */
+            margin-bottom: 1px; /* Minder ruimte tussen list items (was 6px) */
+        }
+
+        .audience-card h3 {
+            margin-bottom: -1px; /* Consistente ruimte onder headings */
         }
 
         .audience-card .btn-primary {
             position: absolute;
-            bottom: 30px;
+            bottom: 30px; /* Iets naar boven verplaatst voor meer ruimte */
             left: 30px;
             right: 30px;
             background: linear-gradient(to bottom, #2196F3, #0D47A1);
@@ -107,6 +120,7 @@
             </div>
 
             <div class="audience-options">
+                <!-- Huurder Card -->
                 <div class="audience-card">
                     <div class="audience-icon">🏠</div>
                     <h3>Huurder</h3>
@@ -114,34 +128,38 @@
                     <ul class="audience-benefits">
                         <li>Geen eigen investering nodig</li>
                         <li>Directe besparing op energiekosten</li>
-                        <li>Duurzamer wonen zonder zorgen</li>
+                        <li>Duurzame energie zonder zorgen</li>
+                        <li>Mogelijkheid tot deelname aan energiegemeenschap</li>
                     </ul>
-                    <a href="huurders.html" class="btn btn-primary btn-block">Informatie voor huurders</a>
+                    <a href="huurders.html" class="btn btn-primary">Informatie voor huurders</a>
                 </div>
 
+                <!-- Woningeigenaar Card -->
                 <div class="audience-card">
-                    <div class="audience-icon">🏘️</div>
+                    <div class="audience-icon">🔑</div>
                     <h3>Woningeigenaar</h3>
-                    <p>Ik bezit een koopwoning in Sidhadorp</p>
+                    <p>Ik ben eigenaar van een woning in Sidhadorp</p>
                     <ul class="audience-benefits">
-                        <li>Collectieve inkoopvoordelen</li>
-                        <li>Participatie in energiedeling</li>
+                        <li>Subsidies en collectieve inkoop</li>
                         <li>Hogere woningwaarde</li>
+                        <li>Snelle terugverdientijd van 3-5 jaar</li>
+                        <li>Deelname aan lokale energiegemeenschap</li>
                     </ul>
-                    <a href="kopers.html" class="btn btn-primary btn-block">Informatie voor koopwoningen</a>
+                    <a href="kopers.html" class="btn btn-primary">Informatie voor woningeigenaren</a>
                 </div>
 
+                <!-- Woningcorporatie Card -->
                 <div class="audience-card">
                     <div class="audience-icon">🏢</div>
                     <h3>Woningcorporatie</h3>
-                    <p>Ik vertegenwoordig de woningcorporatie</p>
+                    <p>Ik vertegenwoordig een woningcorporatie</p>
                     <ul class="audience-benefits">
-                        <li>Waardevermeerdering vastgoed</li>
-                        <li>Voldoen aan duurzaamheidsdoelen</li>
-                        <li>Langetermijnrendement</li>
+                        <li>Verhoogde waarde van uw vastgoed</li>
+                        <li>Verduurzaming van uw woningportefeuille</li>
+                        <li>Tevreden huurders met lagere woonlasten</li>
+                        <li>Invulling van duurzaamheidsdoelstellingen</li>
                     </ul>
-                    <a href="woningcorporatie.html" class="btn btn-primary btn-block">Informatie voor
-                        woningcorporatie</a>
+                    <a href="woningcorporatie.html" class="btn btn-primary">Informatie voor woningcorporaties</a>
                 </div>
             </div>
         </div>
@@ -423,3 +441,5 @@
                     de salderingsregeling die in 2027 vervalt. Hierdoor blijft onze businesscase ook na 2027 intact. <a
                         href="energiedeling.html#eu-regels">Meer informatie</a></p>
             </div>
+        </div>
+    </section>
