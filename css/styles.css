@@ -156,6 +156,7 @@ section {
     text-decoration: none;
     font-size: 1rem;
     transition: all 0.3s ease;
+    text-align: center; /* Tekst centreren */
 }
 
 .btn:hover {
@@ -171,6 +172,21 @@ section {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* Ook specifiek voor de buttons in de audience cards */
+.audience-card .btn-primary {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background: linear-gradient(to bottom, #2196F3, #0D47A1);
+    border: none;
+    padding: 12px 0;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Tekst centreren */
 }
 
 .text-center {
@@ -308,21 +324,15 @@ table th {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     margin: 40px auto;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .audience-card {
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    text-align: center;
-    background-color: white;
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 280px; /* Verbeterd voor betere responsive behavior */
+    max-width: 100%; /* Was 350px, nu 100% */
+    padding: clamp(15px, 5%, 30px); /* Responsieve padding */
 }
 
 .audience-card:hover {
@@ -334,6 +344,22 @@ table th {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+}
+
+/* Voeg deze CSS toe aan je styles.css of in de style tag */
+.audience-card-header {
+    min-height: 110px; /* Vaste hoogte voor titel en intro samen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.audience-benefits {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 0; /* Reset margin zodat het direct onder de header komt */
+    margin-bottom: 25px;
 }
 
 .highlight-box {
@@ -409,6 +435,20 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     padding: 1rem;
+    text-align: center;
+}
+
+/* Chart heading en caption centreren */
+.chart h3, 
+.chart p.caption, 
+.chart .text-center + p {
+    text-align: center;
+}
+
+/* Dit zorgt ervoor dat teksten in de chart allemaal gecentreerd zijn */
+.chart img {
+    margin: 0 auto;
+    display: block;
 }
 
 .bar-container {
@@ -590,6 +630,34 @@ footer {
     display: block;
 }
 
+/* Responsieve typografie met clamp() */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+
+p, li {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+
+/* Responsive afbeeldingen */
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.diagram img, .chart img {
+    width: 100%;
+    object-fit: contain;
+}
+
 /* Responsieve stijlen */
 @media (max-width: 768px) {
     .grid {
@@ -645,6 +713,95 @@ footer {
     
     .step {
         margin-bottom: 1.5rem;
+    }
+    
+    /* Responsieve tabellen */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table {
+        min-width: 500px; /* Zorgt dat tabel scrollbaar wordt indien nodig */
+    }
+    
+    /* Alternatieve mobiele weergave (stapt af van tabellen) */
+    .mobile-card-view tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    .mobile-card-view td {
+        display: block;
+        text-align: right;
+        border-bottom: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .mobile-card-view td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.75rem;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Kleiner scherm aanpassingen */
+@media (max-width: 576px) {
+    .audience-card-header {
+        min-height: auto; /* Niet forceren op kleine schermen */
+    }
+    
+    #audience-selection {
+        min-height: auto; /* Niet forceren op kleine schermen */
+    }
+}
+
+/* Hamburger menu voor zeer kleine schermen */
+@media (max-width: 576px) {
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        transition: left 0.3s ease;
+        z-index: 999;
+        padding-top: 4rem;
+    }
+    
+    nav ul.active {
+        left: 0;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
     }
 }
 
