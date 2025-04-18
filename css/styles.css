@@ -180,7 +180,7 @@ section {
     bottom: 30px;
     left: 30px;
     right: 30px;
-    background: linear-gradient(to bottom, #2196F3, #0D47A1);
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
     border: none;
     padding: 12px 0;
     font-weight: bold;
@@ -753,11 +753,15 @@ img, svg {
 /* Kleiner scherm aanpassingen */
 @media (max-width: 576px) {
     .audience-card-header {
-        min-height: auto; /* Niet forceren op kleine schermen */
+        min-height: 0; /* Verander 'auto' naar '0' */
     }
     
     #audience-selection {
-        min-height: auto; /* Niet forceren op kleine schermen */
+        min-height: 0; /* Verander 'auto' naar '0' */
+    }
+    
+    .audience-card {
+        padding: 15px;
     }
 }
 
@@ -818,3 +822,35 @@ img, svg {
     background-color: #f5f5f5;
     cursor: not-allowed;
 }
+
+/* Banner voor testversie */
+.test-version-banner {
+    background-color: #ffeb3b;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 3px solid #FFC107;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Header met achtergrondafbeelding */
+.main-header {
+    background-image: url('images/solar-neighborhood.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+/* Styles for header, navbar, etc. */
+
+/* ===== CARDS & CONTAINERS ===== */
+/* Styles for cards, boxes, etc. */
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* All media queries */
